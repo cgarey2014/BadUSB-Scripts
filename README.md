@@ -1,2 +1,2 @@
 # BadUSB-Scripts
-Scripts for BadUSB I wrote and collected for Flipper Zero
+This is a collection of scripts for BadUSB/Rubber Ducky I wrote and collected for Flipper Zero use.
