@@ -1,5 +1,5 @@
 <p align="center">
-  <b>BadUSB Scripts Repository</b>
+   <b><font size="+3">BadUSB Scripts Repository</font></b>
 </p>
 
 ![Disclaimer](https://raw.githubusercontent.com/I-Am-Jakoby/I-Am-Jakoby/main/img/disclaimer.png)
