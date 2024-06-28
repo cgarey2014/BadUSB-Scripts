@@ -1,4 +1,5 @@
 # BadUSB Scripts Repository
+![Flipper Zero](https://www.zdnet.com/a/hub/i/2020/10/05/85a1b5e4-68e8-47e7-9809-98df71d018a1/7c7d3a6e8f7b3ecf57f759c9323c5f15/flipper-zero-spy-tool.jpg)
 
 ## Overview
 
