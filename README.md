@@ -1,6 +1,8 @@
+<div align=center>
+
+# 💀 BadUSB 💀
+
 <p align="center">
-   <h1>BadUSB Scripts Repository</h1>
-</p>
 
 ![Disclaimer](https://raw.githubusercontent.com/I-Am-Jakoby/I-Am-Jakoby/main/img/disclaimer.png)
 
