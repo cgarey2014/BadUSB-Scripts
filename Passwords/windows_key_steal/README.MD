@@ -9,7 +9,7 @@ This script extracts the Windows product key from a Windows machine and sends it
 - **Title**: Windows Key Extractor
 - **Author**: Chris Garey
 - **Description**: Extracts Windows product key and sends it to a Discord server channel.
-- **Original Source**: [GitHub Repository](https://github.com/cgarey2014/BadUSB-Scripts/blob/main/windows_key_steal.txt)
+- **Original Source**: [GitHub Repository](https://github.com/cgarey2014/BadUSB-Scripts/tree/main/Passwords/windows_key_steal)
 - **Target**: Windows
 
 ## Features
@@ -27,7 +27,7 @@ This script extracts the Windows product key from a Windows machine and sends it
 
 ### Instructions
 
-1. Clone or download the script from the [GitHub Repository](https://github.com/cgarey2014/BadUSB-Scripts/blob/main/windows_key_steal.txt).
+1. Clone or download the script from the [GitHub Repository]https://github.com/cgarey2014/BadUSB-Scripts/tree/main/Passwords/windows_key_steal).
 2. Insert the BadUSB device into the Windows machine you want to extract the product key from.
 3. The script will automatically:
    - Open PowerShell.
