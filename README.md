@@ -1,5 +1,5 @@
 # BadUSB Scripts Repository
-![Disclaimer]([https://raw.githubusercontent.com/I-Am-Jakoby/I-Am-Jakoby/main/img/disclaimer.png])
+![Disclaimer](https://raw.githubusercontent.com/I-Am-Jakoby/I-Am-Jakoby/main/img/disclaimer.png)
 
 ## Overview
 
