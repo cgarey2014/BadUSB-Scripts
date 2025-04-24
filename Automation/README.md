@@ -15,7 +15,7 @@ This script automates the process of **setting up a cybersecurity environment** 
 
 ## ⚙️ Script Overview
 
-### **cyber_security_setup_ubuntu.txt**
+### **cyber_sec.txt**
    - **Description:** This script prepares an Ubuntu machine for cybersecurity-related tasks by setting up the firewall, allowing SSH access, and installing critical tools for ethical hacking and security research.
    - **Target:** Ubuntu (Linux)
    - **Key Features:**
