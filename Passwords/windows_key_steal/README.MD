@@ -52,18 +52,6 @@ This script is intended for **authorized penetration testing** and **educational
 
 ---
 
-## 📂 File Structure
-
-BadUSB-Scripts/ └── Windows_Key_Extractor/ └── windows_key_steal.txt
-
----
-
-## 🧩 Tags
-
-`badusb` `flipper-zero` `windows-exploitation` `key-extraction` `discord-webhook` `information-gathering` `ethical-hacking` `red-teaming` `powershell`
-
----
-
 ## 📌 License
 
 This project is distributed for educational purposes under the [MIT License](https://opensource.org/licenses/MIT).
