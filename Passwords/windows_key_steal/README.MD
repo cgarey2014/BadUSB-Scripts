@@ -1,45 +1,69 @@
-# Windows Key Extractor
+# 🔑 Windows Key Extractor
 
-## Description
+**Author:** Chris Garey  
+**Original Script:** [`windows_key_steal.txt`](https://github.com/cgarey2014/BadUSB-Scripts/blob/main/windows_key_steal.txt)  
+**Target:** Windows  
+**Category:** BadUSB / Information Gathering
 
-This script extracts the Windows product key from a Windows machine and sends it to a Discord server channel using a BadUSB device.
+---
 
-## Script Details
+## 📜 Description
 
-- **Title**: Windows Key Extractor
-- **Author**: Chris Garey
-- **Description**: Extracts Windows product key and sends it to a Discord server channel.
-- **Original Source**: [GitHub Repository](https://github.com/cgarey2014/BadUSB-Scripts/tree/main/Passwords/windows_key_steal)
-- **Target**: Windows
+The **Windows Key Extractor** is a BadUSB payload designed to extract the Windows product key from a target machine and send it to a specified Discord server channel. This script utilizes PowerShell to query the system's licensing service and retrieve the product key. The key is then exfiltrated by making a POST request to a Discord Webhook URL, allowing for quick and covert extraction of valuable system information.
 
-## Features
+---
 
-- **Product Key Extraction**: Retrieves the Windows product key using PowerShell's `Get-WmiObject` cmdlet.
-- **Discord Integration**: Sends the extracted product key to a specified Discord webhook.
-- **Automated Execution**: Automates the process upon insertion of the BadUSB device.
+## ⚙️ Features
 
-## Usage
+- Extracts the Windows product key using PowerShell
+- Sends the extracted product key to a Discord channel via Webhook
+- Completely automated and stealthy execution
+- Ideal for red team engagements or ethical hacking demonstrations
+- Works on Windows-based systems with PowerShell enabled
 
-### Prerequisites
+---
 
-- Insert the BadUSB device into a target Windows machine.
-- Replace `'WebHookURL_here'` with your actual Discord webhook URL before using.
+## 🛠️ Requirements
 
-### Instructions
+- A BadUSB-compatible device (e.g., Flipper Zero, Rubber Ducky)
+- Target machine must have:
+  - PowerShell enabled
+  - Active internet connection to send data to Discord Webhook
+- **Discord Webhook URL** (edit the script to input your own Webhook URL)
 
-1. Clone or download the script from the [GitHub Repository]https://github.com/cgarey2014/BadUSB-Scripts/tree/main/Passwords/windows_key_steal).
-2. Insert the BadUSB device into the Windows machine you want to extract the product key from.
-3. The script will automatically:
-   - Open PowerShell.
-   - Retrieve the Windows product key.
-   - Send the product key to a specified Discord webhook.
+---
 
-### Notes
+## 🚨 Disclaimer
 
-- This script is for educational purposes only. Ensure you have appropriate authorization before running it.
-- Use responsibly and comply with all legal and ethical guidelines.
-- Replace `'WebHookURL_here'` with your actual Discord webhook URL before use.
+This script is intended for **authorized penetration testing** and **educational purposes** only. Unauthorized use of this script on systems that you do not own or have explicit permission to test is **illegal** and unethical. The author assumes **no responsibility** for the misuse or consequences resulting from this tool.
 
-## License
+---
 
-This project is licensed under the MIT License.
+## 🧠 Usage
+
+1. Modify the following value in the script:
+   - `$hookUrl = "WebHookURL_here"` → Replace with your own Discord Webhook URL
+
+2. Flash the script to your BadUSB device.
+
+3. Plug it into the target Windows system.
+
+4. The script will execute automatically, extract the product key, and send it to your Discord server channel.
+
+---
+
+## 📂 File Structure
+
+BadUSB-Scripts/ └── Windows_Key_Extractor/ └── windows_key_steal.txt
+
+---
+
+## 🧩 Tags
+
+`badusb` `flipper-zero` `windows-exploitation` `key-extraction` `discord-webhook` `information-gathering` `ethical-hacking` `red-teaming` `powershell`
+
+---
+
+## 📌 License
+
+This project is distributed for educational purposes under the [MIT License](https://opensource.org/licenses/MIT).
