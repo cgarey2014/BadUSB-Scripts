@@ -16,7 +16,7 @@ The script is intended for educational and authorized penetration testing purpos
 
 ## ⚙️ Script Overview
 
-### **windows_wifi_exfil.txt**
+### **wifi_steal.txt**
    - **Description:** Automatically extracts all stored WiFi passwords from a Windows machine and sends them to a Discord Webhook for remote retrieval.
    - **Target:** Windows
    - **Key Features:**
