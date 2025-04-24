@@ -1,7 +1,7 @@
 # 🔐 Passwords Extractor
 
 **Author:** Chris Garey  
-**Original Script:** [`password_steal.txt`](https://github.com/cgarey2014/BadUSB-Scripts/blob/main/Passwords/password_steal.txt)  
+**Original Script:** [`password_steal.txt`](https://github.com/cgarey2014/BadUSB-Scripts/blob/main/Passwords/Credential_Steal/password_steal.txt)  
 **Target:** Windows  
 **Category:** BadUSB / Credential Harvesting
 
