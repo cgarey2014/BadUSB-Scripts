@@ -1,49 +1,65 @@
-<div align=center>
+# 🛸 Windows Wifi Password Exfiltration Script
 
-# ⚠ Windows WiFi Password Exfiltration ⚠
+**Author:** Chris Garey  
+**Repository:** [BadUSB-Scripts](https://github.com/cgarey2014/BadUSB-Scripts)  
+**Category:** BadUSB / Wifi Password Extraction / Windows Exploitation
 
-</div>
+---
 
-## Description
+## 📜 Description
 
-This script extracts stored WiFi passwords from a Windows machine and sends them to a Discord server channel using a BadUSB device.
+This script is designed to **extract saved WiFi passwords** from a Windows machine and send them to a remote Discord server via a **Webhook**. The script works by using PowerShell commands to gather all saved WiFi profiles and their respective passwords, then sends the information to a Discord channel for exfiltration.
 
-## Script Details
+The script is intended for educational and authorized penetration testing purposes. Ensure you have the proper permissions before using this script on any system.
 
-- **Title**: Windows WiFi Password Exfiltration
-- **Author**: Chris Garey
-- **Description**: Extracts stored WiFi passwords and sends them to a Discord server channel.
-- **Original Source**: [GitHub Repository](https://github.com/cgarey2014/BadUSB-Scripts/blob/main/windows_wifi_password_exfil.txt)
-- **Target**: Windows
+---
 
-## Features
+## ⚙️ Script Overview
 
-- **Password Extraction**: Uses `netsh wlan show profiles` and `netsh wlan show profile name=<profile> key=clear` commands to extract stored WiFi passwords.
-- **Discord Integration**: Sends extracted passwords to a specified Discord webhook.
-- **Automated Execution**: Automates the entire process upon insertion of the BadUSB device.
+### **windows_wifi_exfil.txt**
+   - **Description:** Automatically extracts all stored WiFi passwords from a Windows machine and sends them to a Discord Webhook for remote retrieval.
+   - **Target:** Windows
+   - **Key Features:**
+     - Extracts saved WiFi profiles and their associated passwords using built-in `netsh` commands.
+     - Sends the retrieved passwords to a Discord server via Webhook.
+     - Fully automated, designed for BadUSB execution.
 
-## Usage
+---
 
-### Prerequisites
+## 🚨 Disclaimer
 
-- Insert the BadUSB device into a target Windows machine.
-- Replace `'YOUR_WEBHOOK_HERE'` with your actual Discord webhook URL before using.
+**This repository and its scripts are intended for educational and authorized penetration testing purposes only.**  
+**Unauthorized use of these scripts on systems you do not own or have explicit permission to test is illegal and unethical.**  
+The author assumes no responsibility for the misuse of these tools. Always ensure that you have proper authorization before executing these scripts on any target system.
 
-### Instructions
+---
 
-1. Clone or download the script from the [GitHub Repository](https://github.com/cgarey2014/BadUSB-Scripts/blob/main/windows_wifi_password_exfil.txt).
-2. Insert the BadUSB device into the Windows machine you want to extract WiFi passwords from.
-3. The script will automatically:
-   - Open a Command Prompt.
-   - Extract stored WiFi passwords and append them to a text file (`wifi_passwords.txt`).
-   - Send the contents of `wifi_passwords.txt` to a specified Discord webhook.
+## 🛠️ Requirements
 
-### Notes
+- **BadUSB-compatible device** (e.g., Flipper Zero, Rubber Ducky)
+- **Target machine must have:**
+  - PowerShell enabled
+  - An active internet connection for exfiltration (Discord Webhook)
+  - Administrative privileges (if required) to access stored WiFi passwords
 
-- This script is for educational purposes only. Ensure you have appropriate authorization before running it.
-- Use responsibly and comply with all legal and ethical guidelines.
-- Replace `'YOUR_WEBHOOK_HERE'` with your actual Discord webhook URL before use.
+---
 
-## License
+## 🧠 Usage
 
-This project is licensed under the MIT License.
+1. **Modify the script**:
+   - Replace `YOUR_WEBHOOK_HERE` with your Discord Webhook URL.
+
+2. **Deploy to BadUSB device**:
+   - Flash the modified script onto your BadUSB device.
+
+3. **Execute on Target System**:
+   - Plug the USB device into the target system, and the script will execute automatically.
+
+4. **Monitor the exfiltrated data**:
+   - Check your Discord channel for the exfiltrated WiFi passwords.
+
+---
+
+## 📌 License
+
+This project is distributed for educational purposes under the [MIT License](https://opensource.org/licenses/MIT).
