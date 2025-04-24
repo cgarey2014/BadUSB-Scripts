@@ -13,12 +13,6 @@ Welcome to the BadUSB Scripts repository. This collection includes various scrip
 
 These scripts are intended for educational and testing purposes only. They demonstrate potential security vulnerabilities and should be used responsibly and with proper authorization.
 
-## Included Scripts
-
-- **Windows WiFi Password Exfiltration**: Extracts stored WiFi passwords from a Windows machine and sends them to a specified location.
-- **Windows Key Extractor**: Retrieves the Windows product key from a Windows machine and sends it to a specified location.
-- **Browser Passwords Extractor and Secure Upload**: Extracts saved passwords from web browsers on a Windows system and securely uploads them to a remote server.
-
 ## Usage
 
 1. Clone the repository to your local machine:
